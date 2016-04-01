@@ -35,8 +35,8 @@
 
 				window.onresize = function() {
 			      WIDTH = canvas.width = 1920 ;
-			      HEIGHT =  canvas.height = 413;
-			      //HEIGHT =  canvas.height = 950;
+			      //HEIGHT =  canvas.height = 413;
+			      HEIGHT =  canvas.height = 950;
 			    }
 			    window.onresize();
 			    ball = new BB.Particle2D({

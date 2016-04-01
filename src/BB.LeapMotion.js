@@ -153,7 +153,7 @@ var depthZ = 0;
         var canvasGiven = false;
 
         // gets data from config
-        var canvas = (config && typeof config.canvasConstructor === 'object') ? config.canvasConstructor : null; 
+        var canvas = (config && typeof config.canvas === 'object') ? config.canvas : null; 
         var getGestures = (config && typeof config.gesturesEnabled === 'boolean') ? config.gesturesEnabled : false;
         var mapDimension = (config && typeof config.mapDimension === 'number') ? config.mapDimension : 2;
 
@@ -274,7 +274,7 @@ var depthZ = 0;
       }   
   };
 
-  BB.LeapMotion.mapX = function(configX){ 
+  BB.LeapMotion.prototype.mapX = function(configX){ 
      //minX = (configX && typeof configX.minX === 'number') ? configX.minX : 0; 
      //var maxX = (configX && typeof configX.maxX === 'number') ? configX.maxX : 0; 
      widthX = (configX && typeof configX.widthX === 'number') ? configX.widthX : null;
@@ -288,7 +288,7 @@ var depthZ = 0;
       console.log(" widthX parameter missing on mapX method (Not needed if a canvas is given)");
      }  
   };
-  BB.LeapMotion.mapY = function(configY){ 
+  BB.LeapMotion.prototype.mapY = function(configY){ 
      //minY = (configY && typeof configY.minY === 'number') ? configY.minY : 0; 
      //var maxY = (configY && typeof configY.maxY === 'number') ? configY.maxY : 0; 
      heightY = (configY && typeof configY.heightY === 'number') ? configY.heightY : null;
@@ -302,7 +302,7 @@ var depthZ = 0;
       console.log(" heightY parameter missing on mapY method (Not needed if a canvas is given)");
      }   
   };
-  BB.LeapMotion.mapZ = function(configZ){ 
+  BB.LeapMotion.prototype.mapZ = function(configZ){ 
      minZ = (configZ && typeof configZ.minZ === 'number') ? configZ.minZ : 0; 
      var maxZ = (configZ && typeof configZ.maxZ === 'number') ? configZ.maxZ : 0; 
      depthZ = (configZ && typeof configZ.depthZ === 'number') ? configZ.depthZ : null;

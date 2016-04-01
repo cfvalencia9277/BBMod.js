@@ -17,7 +17,7 @@
 		function setup() {
 				// creates an instance of the LeapMotion module created for liBB library
 				leapMotion = new BB.LeapMotion({
-				canvasConstructor : canvas,
+				canvas : canvas,
 			    mapDimension:2 ,
 				gesturesEnabled: false
 				});// creates an instance of the LeapMotion module created for liBB library
